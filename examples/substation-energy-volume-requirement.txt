@@ -1,0 +1,46 @@
+:set article type data
+
+:prefix sol means element solution
+:prefix req means element requirement
+:prefix param means association requirement-parametrization
+:prefix par means projection par 
+:prefix tit means attribute title lang='en' string 
+:prefix dsc  means attribute description lang='en' string
+
+:indentation sol is parent of req   means sol solution-requirement req
+:indentation req is parent of param means association between parent and grandparent is projection req from param
+:indentation par is parent of param means par is projection par from param
+:indentation sol is parent of tit   means sol has attribute tit
+:indentation sol is parent of dsc   means sol has attribute dsc 
+
+sol: substation-energy-volume-estimator
+    tit: 'Substation energy volume estimator'
+    dsc: 'Estimating consumption usage going through substation'
+
+    req: tariff-switching-energy-consumption-reaction-estimation
+    req: appliance-kind-energy-consumption-volume-estimation
+
+
+sol: substation-energy-volume-predictor
+    req: energy-prediction
+        param:
+            par: time-horizon 
+            val: 1-day
+        param:
+            par: time-granularity 
+            val: 1-hour
+
+sol: substation-energy-flexibility-estimator
+    req: estimate-energy-flexibility-volume
+        param:
+            par: flexibility-type
+            val: available
+        param:
+            par: flexibility-type
+            val: controlled
+
+sol: substation-energy-flexibility-predictor
+    req: estimate-energy-flexibility-volume
+        param:
+            par: flexibility-type
+            val: controlled

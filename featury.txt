@@ -1,0 +1,1 @@
+:slovo, slovo:, 'slovo', %komentar, /*komentar*/, keywords: is, a, means, parent

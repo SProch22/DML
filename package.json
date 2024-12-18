@@ -1,0 +1,37 @@
+{
+	"name": "DML",
+	"displayName": "SyntaxHighlighterTxt",
+	"description": "A txt language for highlighting syntax in DML",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.96.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "txt",
+				"aliases": [
+					"DMLtxt",
+					"txt"
+				],
+				"extensions": [
+					".txt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "txt",
+				"scopeName": "source.dmltxt",
+				"path": "./syntaxes/txt.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"size": 6274
+	}
+}

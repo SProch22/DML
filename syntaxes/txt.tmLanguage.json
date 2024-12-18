@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DMLtxt",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#definitions"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "%.*$"
+				},
+				{
+					"name": "comment.block",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"definitions": {
+			"patterns": [
+				{
+					"name": "def.start",
+					"match": ":[^\\s]+"
+				},
+				{
+					"name": "def.end",
+					"match": "^[^:]+:"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "strings.apostrophe",
+					"match": "'.*'"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "\\b(?:is|a|parent|means)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.dmltxt"
+}

@@ -1,0 +1,32 @@
+:set article type data
+
+:prefix sol means element solution
+
+:indentation sol is parent of sol means sol is specialization of sol 
+
+
+sol: substation-energy-volume
+    sol: import, export, bilance
+        sol: predictor
+        sol: estimator
+        sol: localisator
+        sol: tracker
+
+sol: substation-energy-limit
+    sol: import, export, bilance
+        sol: predictor
+        sol: estimator
+        sol: localisator
+        sol: tracker
+
+sol: substation-energy-loss
+    sol: estimator
+    sol: localisator
+    sol: predictor
+    sol: tracker
+
+sol: substation-energy-flexibility
+    sol: estimator
+    sol: predictor
+    sol: localisator
+    sol: tracker
