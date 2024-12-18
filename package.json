@@ -1,6 +1,6 @@
 {
 	"name": "DML",
-	"displayName": "SyntaxHighlighterTxt",
+	"displayName": "DML",
 	"description": "A txt language for highlighting syntax in DML",
 	"version": "0.0.1",
 	"engines": {
